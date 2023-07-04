@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import recognition from './Comps/APIs/speechSettings'
+import recognition from './APIs/speechSettings'
 import DialogWrapper from './Comps/otherComps/DialogWrapper'
 import MessageControl from './Comps/otherComps/MessageControl'
 import KeyPrompt from './Comps/UIComps/KeyPrompt'
