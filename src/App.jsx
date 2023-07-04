@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import recognition from './speechSettings'
-import DialogWrapper from './Comps/DialogWrapper'
-import MessageControl from './Comps/MessageControl'
+import recognition from './Comps/APIs/speechSettings'
+import DialogWrapper from './Comps/otherComps/DialogWrapper'
+import MessageControl from './Comps/otherComps/MessageControl'
+import KeyPrompt from './Comps/UIComps/KeyPrompt'
 
 const App = () => {
   const [dialog, setDialog] = useState([])
@@ -36,6 +37,7 @@ const App = () => {
           isRecording={isRecording}
         />
       </div>
+      <KeyPrompt />
     </div>
   )
 }
