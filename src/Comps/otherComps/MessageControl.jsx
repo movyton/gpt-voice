@@ -2,6 +2,9 @@ import { useState } from 'react'
 import Button from '../UIComps/Button'
 import Textarea from '../UIComps/Textarea'
 import { runPrompt } from '../../APIs/openai'
+import arrow from '../../images/arrow.png'
+import micro from '../../images/microphone.png'
+import stop from '../../images/stop.png'
 
 const MessageControl = ({
   textAreaRef,
@@ -30,17 +33,17 @@ const MessageControl = ({
         <Button
           func={() => req(textAreaRef)}
           isRecording={textAreaRef.length ? false : true}
-          textContent={'send req'}
+          imagePath={arrow}
         />
         <Button
           func={recognitionStart}
           isRecording={isRecording ? true : false}
-          textContent={'start'}
+          imagePath={micro}
         />
         <Button
           func={recognitionStop}
           isRecording={isRecording ? false : true}
-          textContent={'stop'}
+          imagePath={stop}
         />
       </div>
     </div>

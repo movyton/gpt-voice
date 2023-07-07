@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Button from './Button'
 import { keyValidation } from '../../APIs/openai'
 import APIKeyProvider from '../../APIs/APIKeyProvider'
+import save from '../../images/save2.png'
 
 const KeyPrompt = () => {
   const [input, setInput] = useState(
@@ -33,7 +34,7 @@ const KeyPrompt = () => {
       <Button
         func={() => keyVerif(input)}
         isRecording={false}
-        textContent={'save key'}
+        imagePath={save}
       />
       <p className={incorrectKeyMessage ? 'unvalid-key-notification' : 'hide'}>
         invalid key

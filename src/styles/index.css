@@ -30,6 +30,11 @@
   box-sizing: border-box;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 html,
 body,
 #root,
@@ -116,6 +121,7 @@ body,
   position: absolute;
   top: 10px;
   right: 20px;
+  display: flex;
 }
 
 .unvalid-key-notification {
@@ -124,4 +130,12 @@ body,
 
 .hide {
   display: none;
+}
+
+.button-background {
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
 }
