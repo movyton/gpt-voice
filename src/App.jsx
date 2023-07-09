@@ -7,7 +7,7 @@ import KeyPrompt from './Comps/UIComps/KeyPrompt'
 const App = () => {
   const [dialog, setDialog] = useState([])
   const [isRecording, setIsRecording] = useState(false)
-  const [textAreaRef, setTextareaRef] = useState('')
+  const [textareaRef, setTextareaRef] = useState('')
 
   recognition.onresult = (event) => {
     setTextareaRef(event.results[0][0].transcript)
@@ -29,7 +29,7 @@ const App = () => {
       <div className="container main_back-color">
         <DialogWrapper dialog={dialog} />
         <MessageControl
-          textAreaRef={textAreaRef}
+          textareaRef={textareaRef}
           setTextareaRef={setTextareaRef}
           setRequestLog={setDialog}
           recognitionStart={recognitionStart}
