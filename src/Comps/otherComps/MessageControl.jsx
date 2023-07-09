@@ -1,13 +1,13 @@
-import { useState } from 'react'
 import Button from '../UIComps/Button'
 import Textarea from '../UIComps/Textarea'
 import { runPrompt } from '../../APIs/openai'
+import LoadImage from './LoadImage'
 import arrow from '../../images/arrow.png'
 import micro from '../../images/microphone.png'
 import stop from '../../images/stop.png'
 
 const MessageControl = ({
-  textAreaRef,
+  textareaRef,
   setTextareaRef,
   setRequestLog,
   recognitionStart,
@@ -28,11 +28,11 @@ const MessageControl = ({
 
   return (
     <div className="message-control">
-      <Textarea state={textAreaRef} setState={setTextareaRef} />
+      <Textarea state={textareaRef} setState={setTextareaRef} />
       <div className="record-control">
         <Button
-          func={() => req(textAreaRef)}
-          isRecording={textAreaRef.length ? false : true}
+          func={() => req(textareaRef)}
+          isRecording={textareaRef?.length ? false : true}
           imagePath={arrow}
         />
         <Button
@@ -45,6 +45,7 @@ const MessageControl = ({
           isRecording={isRecording ? false : true}
           imagePath={stop}
         />
+        <LoadImage setTextareaRef={setTextareaRef} />
       </div>
     </div>
   )
